@@ -92,7 +92,9 @@ void Tree :: create_Tree(){
 
 int Tree :: tree_height(Node* p){
     int x, y;
-    if(p){
+    if(p==0)
+        return 0;
+    else{
         x = No_of_node(p->lchild);
         y = No_of_node(p->rchild);
         if(x>y)
@@ -100,7 +102,7 @@ int Tree :: tree_height(Node* p){
         else
             return y+1;
     }
-    return 0;
+    
 }
 
 int Tree :: No_of_node(Node* p){
